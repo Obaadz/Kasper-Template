@@ -1,7 +1,8 @@
 /*Start Variables */
 :root {
   --primaryColor: #19c8fa;
-  --transparentColor: rgb(15 116 143 / 70%);;
+  --transparentColor: rgb(15 116 143 / 70%);
+  --sectionPadding: 100px;
 }
 /*End Variables */
 
@@ -30,6 +31,7 @@ a {
 
 h1,
 h2,
+h3,
 p {
   margin: 0;
   font-weight: normal;
@@ -78,7 +80,7 @@ p {
 }
 
 .section {
-  padding: 100px 10px;
+  padding: var(--sectionPadding) 10px;
   text-align: center;
 }
 .section h2,
@@ -322,3 +324,44 @@ header .form::before {
   background: var(--primaryColor)
 }
 /* End Landing */
+
+/* Start Services */
+.services {
+  padding-bottom: var(--sectionPadding);
+}
+
+.services .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.services .srv-box {
+  display: flex;
+  width: calc(50% - 20px);
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .services .srv-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services .srv-box + .srv-box {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .services .srv-box {
+    width: 100%;
+  }
+}
+
+.services .srv-box i {
+  margin-top: 5px;
+}
+.services .srv-box h3 {
+  color: var(--primaryColor);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* End Services */
