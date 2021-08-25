@@ -202,7 +202,6 @@ header ul li:hover::before {
   background: var(--primaryColor);
 }
 header ul a {
-  /* display: block; */
   color: white;
   transition: color .3s;
 }
@@ -365,3 +364,56 @@ header .form::before {
   margin-bottom: 20px;
 }
 /* End Services */
+
+/* Start Design */
+.design {
+  position: relative;
+  height: 600px;
+  background: url(../images/design-features.jpg);
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.design img {
+  height: 75%;
+  position: absolute;
+  bottom: -15%;
+  left: 6%;
+}
+
+.design .content {
+  width: 50%;
+  background: var(--transparentColor);
+  color: white;
+  padding: 50px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width:767px) {
+  .design img {
+    display: none;
+  }
+  .design .content {
+    width: 100%;
+  }
+}
+
+.design .content h2 {
+  margin-bottom: 20px;
+}
+.design .content li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f108";
+  font-weight: 900;
+  margin-right: 20px;
+  position: relative;
+  top: 1px;
+}
+.design .content li + li {
+  margin-top: 10px;
+}
+
+/* End Desgin */
