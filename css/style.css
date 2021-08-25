@@ -415,5 +415,19 @@ header .form::before {
 .design .content li + li {
   margin-top: 10px;
 }
-
 /* End Desgin */
+
+/* Start Portfolio */
+.portfolio .current {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.portfolio .current li {
+  padding: 10px;
+}
+.portfolio .current li.active {
+  background: var(--primaryColor);
+  color: white;
+}
+/* End Portfolio */
