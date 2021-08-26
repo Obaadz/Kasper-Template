@@ -398,6 +398,7 @@ header .form::before {
   }
   .design .content {
     width: 100%;
+    padding: 50px 30px;
   }
 }
 
@@ -418,16 +419,123 @@ header .form::before {
 /* End Desgin */
 
 /* Start Portfolio */
+.portfolio {
+  padding-bottom: var(--sectionPadding);
+}
+
 .portfolio .current {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 .portfolio .current li {
-  padding: 10px;
+  padding: 5px 10px;
 }
 .portfolio .current li.active {
   background: var(--primaryColor);
   color: white;
 }
+
+.portfolio .images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio .images .box {
+  position: relative;
+  flex-basis: 100%;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .portfolio .images .box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio .images .box {
+    flex-basis: 25%;
+  }
+}
+.portfolio .images .box img {
+  max-width: 100%;
+  margin-bottom: -10px;
+  transition: transform .5s;
+}
+.portfolio .images .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+
+.portfolio .images .box div {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  padding: 10px 20px;
+  background: white;
+  transition: bottom .3s;
+
+}
+.portfolio .box:hover div {
+  bottom: 0px;
+}
+
+.portfolio .images p {
+  color: var(--primaryColor)
+}
+
+.portfolio .container {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .more {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: white;
+  background: var(--primaryColor);
+  margin-top: 30px;
+  padding: 10px 15px;
+}
 /* End Portfolio */
+/* Start Video */
+.video {
+  position: relative;
+  overflow: hidden;
+}
+.video video {
+  width: 100%;
+  margin-bottom: -10px;
+}
+
+.video .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 50px;
+  color: white;
+  background: var(--transparentColor);
+
+}
+
+.video h2,
+.video .more {
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .video .content {
+    padding: 50px 10px;
+    gap: 10px;
+  }
+  .video h2 {
+    font-size: 21px;
+  }
+}
+.video p,
+.video .more {
+  color: white;
+}
+.video .more {
+  padding: 5px 15px;
+  background: black
+}
+/* End Video */
